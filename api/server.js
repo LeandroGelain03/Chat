@@ -1,11 +1,12 @@
 const express = require("express");
-const path = require('path');
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const app = express();
 const server = require("http").createServer(app);
 const io = require('socket.io')(server);
-const Axios = require('axios');
+
+const dotenv = require('dotenv');
+dotenv.config();
 var cors = require('cors');
 app.use(cors());
 
@@ -26,8 +27,8 @@ io.on("connection", socket => {
 })
 
 app.use(morgan('dev'));
-
-mongoose.connect(`mongodb+srv://LeandroGelain03:M.a.159730@chat-zip9p.mongodb.net/test?retryWrites=true&w=majority`, {
+console.log(process.env.USERNAME_MONGO)
+mongoose.connect(`mongodb+srv://${process.env.USERNAME_MONGO}:${process.env.PASSWORD_MONGO}@chat-zip9p.mongodb.net/test?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
