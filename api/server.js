@@ -50,5 +50,5 @@ app.use((error, req, res, next) => {
         error: error.message
     });
 });
-const porta = process.env.PORT || 3333, 'http://104.41.42.227'
+const porta = process.env.PORT || 3333, '104.41.42.227'
 server.listen( porta )
