@@ -32,7 +32,7 @@ io.on("connection", socket => {
 })
 
 app.use(morgan('dev'));
-console.log(process.env.USERNAME_MONGO)
+console.log(process.env.PORT)
 mongoose.connect(`mongodb+srv://LeandroGelain:M.a.159730@chat-zip9p.mongodb.net/test?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -50,5 +50,5 @@ app.use((error, req, res, next) => {
         error: error.message
     });
 });
-const porta = process.env.PORT || 3333
+const porta = process.env.PORT || 3333, 'http://104.41.42.227'
 server.listen( porta )
