@@ -45,5 +45,5 @@ app.use((error, req, res, next) => {
         error: error.message
     });
 });
-
-server.listen(3333)
+const porta = process.env.PORT || 3333
+server.listen( porta )
