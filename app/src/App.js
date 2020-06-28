@@ -3,7 +3,7 @@ import './App.css';
 import Axios from 'axios'
 import socketIOClient from 'socket.io-client';
 
-var socket = socketIOClient.connect("http://localhost:3333");
+var socket = socketIOClient.connect("http://104.41.42.227:3333");
 
 class Chat_app extends Component {
 	constructor (props) {
