@@ -33,7 +33,7 @@ io.on("connection", socket => {
 
 app.use(morgan('dev'));
 console.log(process.env.USERNAME_MONGO)
-mongoose.connect(`mongodb+srv://LeandroGelain:M.a.159730@chat-zip9p.mongodb.net/test?retryWrites=true&w=majority`, {
+mongoose.connect('mongodb+srv://LeandroGelain:M.a.159730@chat-dp911.mongodb.net/test', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
