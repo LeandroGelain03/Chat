@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
 const app = express();
+const router = express.Router();
 const server = require("http").createServer(app);
 const io = require('socket.io')(server);
 
@@ -16,6 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use('/message/', messagesRouter);
+
+app.use('/teste/', (req, res) => {
+    res.status(200).json({message: 'teste'})
+});
 
 io.on("connection", socket => {
     console.log(`socket: ${socket.id}`);
