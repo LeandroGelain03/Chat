@@ -8,7 +8,7 @@
     "mongoose": "^5.9.2",
     "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "name": "Chat",
   "description": "Criação de um chat usando MongoDB, NodeJS, ReactJS.",
